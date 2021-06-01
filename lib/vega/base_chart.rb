@@ -26,7 +26,7 @@ module Vega
       Spec.new(spec).to_iruby
     end
 
-    def to_json
+    def to_json(*)
       spec.to_json
     end
 
