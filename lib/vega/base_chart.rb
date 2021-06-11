@@ -2,14 +2,14 @@ module Vega
   class BaseChart
     extend MethodHelpers
 
-    def initialize
+    def initialize(initial_spec = {}, schema:)
       @spec = {
-        "$schema": @schema,
+        "$schema": schema,
         width: "container",
         height: "container"
         # maybe add later
         # config: {mark: {tooltip: true}}
-      }
+      }.merge!(initial_spec.transform_keys(&:to_sym))
     end
 
     def embed_options!(value)

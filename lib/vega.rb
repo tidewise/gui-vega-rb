@@ -21,8 +21,8 @@ module Vega
       Chart.new
     end
 
-    def lite
-      LiteChart.new
+    def lite(initial_spec = {})
+      LiteChart.new(initial_spec)
     end
 
     def render(spec)

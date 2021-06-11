@@ -10,9 +10,11 @@ module Vega
     array_methods \
       :transform
 
-    def initialize
-      @schema = "https://vega.github.io/schema/vega-lite/v4.json"
-      super()
+    def initialize(
+      initial_spec = {},
+      schema: "https://vega.github.io/schema/vega-lite/v4.json"
+    )
+      super
     end
 
     %I[layer hconcat vconcat concat].each do |composition|
