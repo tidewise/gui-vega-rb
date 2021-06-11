@@ -27,7 +27,7 @@ module Vega
       immutable_method composition
     end
 
-    VIEW_FIELDS = %I[mark encoding transform projection
+    VIEW_FIELDS = %I[data params mark encoding transform projection
                      selection hconcat vconcat layer repeat facet
                      spec width height].freeze
 
