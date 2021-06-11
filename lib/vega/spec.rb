@@ -47,7 +47,7 @@ module Vega
       height = @spec["height"].is_a?(Integer) ? "#{@spec["height"]}px" : "300px"
 
       # user can override with usermeta: {embedOptions: ...}
-      embed_options = {actions: false}
+      embed_options = {actions: false, logLevel: "vega.Info"}
 
       # html vars
       html_vars = {
@@ -83,7 +83,7 @@ module Vega
 
       # needs width to be set for vegaEmbed to work
       html = %(<div id="%{id}" style="width: %{width}; height: %{height};"></div>) % html_vars.merge(css_vars)
-      js = "vegaEmbed(%{el}, %{spec}, %{opt});" % js_vars
+      js = "vegaEmbed(%{el}, %{spec}, %{opt}).catch(console.error);" % js_vars
 
       [html, js]
     end
