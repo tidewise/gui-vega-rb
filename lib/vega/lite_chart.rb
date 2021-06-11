@@ -9,7 +9,7 @@ module Vega
       :mark
 
     array_methods \
-      :transform
+      :transform, :params
 
     def initialize(
       initial_spec = {},
