@@ -31,7 +31,7 @@ module Vega
               'vega-embed': 'https://cdn.jsdelivr.net/npm/vega-embed@6.18.2?noext'
             }
           });
-          require(['vega', 'vega-lite', 'vega-embed'], function(vega, vegaLite, vegaEmbed) {
+          require(['vega', 'vega-lite', 'vega-embed', 'vega-util'], function(vega, vegaLite, vegaEmbed, vegaUtil) {
             #{js}
           });
         </script>
